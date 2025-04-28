@@ -36,7 +36,6 @@ lang = EN
 - `-t, --target`: SAP hostname or IP (required if not using -conn)
 - `-c, --client`: SAP client number (required if not using -conn)
 - `-s, --sysnr`: SAP system number (default: '00')
-- `-P, --port`: SAP gateway port (default: '3300')
 - `-r, --saprouter`: SAP Router string
 
 ## Function Module Execution
