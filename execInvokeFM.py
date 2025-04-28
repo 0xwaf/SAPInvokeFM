@@ -344,7 +344,6 @@ def parse_args() -> argparse.Namespace:
     conn_group.add_argument('-t', '--target', help='SAP hostname or IP')
     conn_group.add_argument('-c', '--client', help='SAP client number')
     conn_group.add_argument('-s', '--sysnr', default='00', help='SAP system number')
-    conn_group.add_argument('-P', '--port', default='3300', help='SAP gateway port')
     parser.add_argument('-r', '--saprouter', help='SAP Router string')
 
     # Function options
@@ -355,7 +354,7 @@ def parse_args() -> argparse.Namespace:
 
     args = parser.parse_args()
 
-    if not args.connection and not all([args.user, args.password, args.target, args.client]):
+    if not args.connection and not all([args.user, args.password, args.target, args.client, args.sysnr]):
         parser.error("When --connection is not specified, --user, --password, --target, and --client are required")
 
     return args
